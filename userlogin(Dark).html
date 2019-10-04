@@ -1,0 +1,161 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>安卓手机刷机论坛-用户登录(现处于黑暗模式)</title>
+</head>
+
+<link href="css/css(Dark).css" rel="stylesheet">
+<body bgcolor="#F7F7F7" onLoad="rand()">
+<div class="Body">
+	<div class="Body_logo">
+    <a href="index.html"><img src="img/logo.png"></a>
+    </div>
+    <div class="Body_Serach">
+    	<div style="border:0px solid red;margin:32px auto;text-align:center;">
+    	<input type="text" style="height:25px;width:200px;font-family:bahnschrift;float:none;margin:1px;border-radius:10px;border-color:#FF7F00;">
+        <input type="button" name="serach" style="font-size:20px;font-family:bahnschrift;position:relative;top:2px;border-radius:10px;background-color:#FF7F00;box-shadow:2px 2px 2px #FF7F00;"  value="Search">
+        </div>
+    </div>
+    <div style="border:0px solid red;width:150px;height:100px;float:left;">
+    		<span style="font-size:12px;">荣誉奖项：<br>
+            <a href="https://www.mi.com" target="_blank">全网最热门网站</a><br>
+            <a href="https://www.rom.com" target="_blank">安卓开源联盟网站成员</a><br>
+            <a href="https://www.rom.com" target="_blank">B&A开发大奖第一名</a><br>
+            <br>
+            </span>
+    </div>
+     <div style="border:0px solid red;width:60px;height:100px;float:right;">
+    		<span style="font-size:12.5px;text-align:center;"><a href="javascript:openWin()">注册账户</a><br>
+            </span>
+            <span style="font-size:12.5px;text-align:center;"><a href="javascript:openWin1()">登录账户</a><br>
+            </span>
+            <span style="font-size:12.5px;text-align:center;"><a href="userlogin.html">正常模式</a><br>
+            </span>
+    </div>
+     <div style="border:0px solid red;width:100%;height:42px;float:left;">
+            <div class="nav">
+					<ul>
+						<li class="nav-item"><a href="index.html">首&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;页</a></li>
+						<li class="nav-item"><a href="#dev">&nbsp;开&nbsp;发&nbsp;者</a></li>
+						<li class="nav-item"><a href="newslist.html">&nbsp;技&nbsp;术&nbsp;资&nbsp;讯&nbsp;</a></li>
+						<li class="nav-item"><a href="#">&nbsp;机&nbsp;型&nbsp;列&nbsp;表</a></li>
+						<li class="nav-item"><a href="#">&nbsp;讨&nbsp;论&nbsp;区</a></li>
+						<li class="nav-item"><a href="#">&nbsp;精&nbsp;品&nbsp;帖&nbsp;子</a></li>
+                        <li class="nav-item"><a href="#">R&nbsp;O&nbsp;M&nbsp;包</a></li>
+                        <li class="nav-item"><a href="tobedev.html">成为开发者</a></li>
+                        <li class="nav-item"><a href="tobedev.html">成为管理者</a></li>
+                        <li class="nav-item"><a href="download.html">A&nbsp;P&nbsp;P&nbsp;下&nbsp;载</a></li>
+					</ul>
+				</div>
+</div>
+<div style="border:0px solid red;width:80px;height:20px;font-size:12px;float:left;">
+			&nbsp;<img src="img/announce.gif">今日公告:
+</div>
+<div style="border:0px solid red;width:945px;height:20px;font-size:12px;float:right;">
+ <marquee style="position:relative;top:2px;" onMouseOver="this.stop()" onMouseOut="this.start()"><a href="#">欢迎ssa122加入刷机论坛！！</a>&nbsp;&nbsp;<a href="#">欢迎JK0720成为小米Note3板块版主！！</a>&nbsp;&nbsp;<a href="#">2019年第一季度优秀开发者评选开始啦，快来为你喜欢的开发者进行投票吧！</a>&nbsp;&nbsp;<a href="#">欢迎mtk149成为小米9板块版主！！</a></marquee>
+</div>
+<div style="width:1030px;height:480px;border:0px solid red;float:left;">
+<div style="width:1030px;height:40px;border:0px solid red;float:left;">
+<img src="img/登录.png" height="40">&nbsp;<b style="position:relative;bottom:13px;">用&nbsp;户&nbsp;登&nbsp;录</b><br>
+<div style="margin:40px;border:0px solid red;height:545px;">
+<h3 align="center">请填写登录信息：</h3><br>
+<div style="position:relative;left:280px;"><input type="text"  style="width:358px;height:50px;font-family:Bahnschrift Regular;font-size:20px;border-radius:10px;border-shadow:5px;" placeholder="请输入注册时的用户名" maxlength="6" id="txtname" onBlur="checkName()"><img src="img/right.png" style="display:none;" id="rig"><span id="tips">请输入注册时用户名</span>
+</div>
+<div style="position:relative;left:280px;top:10px;"><input type="password"  style="width:358px;height:50px;font-family:Bahnschrift Regular;font-size:20px;border-radius:10px;border-shadow:5px;" placeholder="请输入注册时的密码" maxlength="11" id="txtpwd" onBlur="checkPwd()"><img src="img/right.png" style="display:none;" id="rig"><span id="tips">请输入注册时的密码</span>
+</div>
+<div style="position:relative;left:280px;top:20px;"><input type="text"  style="width:195px;height:50px;font-family:Bahnschrift Regular;font-size:20px;border-radius:10px;border-shadow:5px;" placeholder="请输入验证码" maxlength="16">
+<div style="position:relative;left:210px;bottom:53px;"><canvas id="canvas" width="150px" height="50px" style="border-radius:3px;"></canvas>
+<script>
+function randomNum(min,max){
+        return Math.floor(Math.random()*(max-min)+min);
+	}
+	
+	function randomColor(min,max){
+        var _r = randomNum(min,max);
+        var _g = randomNum(min,max);
+        var _b = randomNum(min,max);
+        return "rgb("+_r+","+_g+","+_b+")";
+	}
+	
+	document.getElementById("canvas").onclick = function(e){
+        e.preventDefault();
+        drawPic();
+	}
+	
+	function drawPic(){
+        //获取到元素canvas
+        var $canvas = document.getElementById("canvas");
+        var _str = "0123456789";//设置随机数库
+        var _picTxt = "";//随机数
+        var _num = 4;//4个随机数字
+        var _width = $canvas.width;
+        var _height = $canvas.height;
+        var ctx = $canvas.getContext("2d");//获取 context 对象
+        ctx.textBaseline = "bottom";//文字上下对齐方式--底部对齐
+        ctx.fillStyle = randomColor(180,240);//填充画布颜色
+        ctx.fillRect(0,0,_width,_height);//填充矩形--画画
+        for(var i=0; i<_num; i++){
+            var x = (_width-10)/_num*i+10;
+            var y = randomNum(_height/2,_height);
+            var deg = randomNum(-45,45);
+            var txt = _str[randomNum(0,_str.length)];
+            _picTxt += txt;//获取一个随机数
+            ctx.fillStyle = randomColor(10,100);//填充随机颜色
+            ctx.font = randomNum(16,40)+"px SimHei";//设置随机数大小，字体为SimHei
+            ctx.translate(x,y);//将当前xy坐标作为原始坐标
+            ctx.rotate(deg*Math.PI/180);//旋转随机角度
+            ctx.fillText(txt, 0,0);//绘制填色的文本
+            ctx.rotate(-deg*Math.PI/180);
+            ctx.translate(-x,-y);
+        }
+        for(var i=0; i<_num; i++){
+            //定义笔触颜色
+            ctx.strokeStyle = randomColor(90,180);
+            ctx.beginPath();
+            //随机划线--4条路径
+            ctx.moveTo(randomNum(0,_width), randomNum(0,_height));
+            ctx.lineTo(randomNum(0,_width), randomNum(0,_height));
+            ctx.stroke();
+        }
+        for(var i=0; i<_num*10; i++){
+            ctx.fillStyle = randomColor(0,255);
+            ctx.beginPath();
+            //随机画原，填充颜色
+            ctx.arc(randomNum(0,_width),randomNum(0,_height), 1, 0, 2*Math.PI);
+            ctx.fill();
+        }
+        return _picTxt;//返回随机数字符串
+    }
+    drawPic();
+</script>
+</div>
+<input type="button"  style="width:358px;height:50px;font-family:Bahnschrift Regular;font-size:20px;border-radius:10px;border-shadow:5px;background:#FF7F00;" value="Login"  onClick="checkAll()">
+</div>
+</div>
+</div>
+</div>
+<div style="width:1030px;height:23px;border:0px solid red;float:left;">
+</div>
+<div style="border:0px solid red;width:1030px;height:142px;float:left;">
+<div style="font-size:13px;text-align:center;"><a href="#">关于本站</a>&nbsp;|&nbsp;<a href="#">服务协议</a>&nbsp;|&nbsp;<a href="#">隐私政策</a>&nbsp;|&nbsp;<a href="#">开放平台</a>&nbsp;|&nbsp;<a href="#">商务洽谈</a>&nbsp;|&nbsp;<a href="#">安卓开源许可证</a>&nbsp;|&nbsp;<a href="#">版权所有</a>&nbsp;<br>
+&copy;2019 AndroidPhoneBBS&nbsp;安卓手机刷机论坛&reg;<br>
+您的每一次赞赏都是对本站最大的支持(自愿赞赏，不强迫)！<b>→<a href="#">支持本站</a>←</b>
+<br>
+<a href="#">粤网文[2017]6138-1456号</a> <a href="#">新出网证（粤）字010号</a> <a href="#">网络视听许可证1904073号</a> 增值电信业务经营许可证：<a href="#">粤B2-20090059 </a><a href="#">B2-20090028</a><br>
+<br>
+<img src="img/备案.png">
+&nbsp;<img src="img/举报.png">
+&nbsp;<img src="img/文明.png">
+&nbsp;<img src="img/验证.png">
+&nbsp;<img src="img/网监.png">
+</div>
+</div>
+<script src="js/main.js" type="text/javascript"></script>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>
+

@@ -1,0 +1,107 @@
+@charset "utf-8";
+/* CSS Document */
+.
+{
+	font-family:'Barlow-Regular';
+	font-size:20px;
+	color:black;
+	background-color:#F7F7F7;
+	
+}
+.Body
+{
+	border:1px solid red;
+	width:1030px;
+	height:805px;
+	margin:20px auto;
+	background-color:#F7F7F7;
+	background-size:cover;
+	
+}
+.Body_logo
+{
+	border:0px solid red;
+	width:300px;
+	height:100px;
+	float:left;
+}
+.Body_Serach
+{
+	border:0px solid red;
+	width:500px;
+	height:100px;
+	float:left;
+	
+}
+a
+{
+	color:black;
+	text-decoration:none;
+}
+a:hover
+{
+	color:#66ccff;
+	text-decoration:none;
+}
+.nav {
+	display:inline-block;
+	font-size:14px;
+	font-weight:900;
+	width:103%;
+	position:relative;
+	right:40px;
+	bottom:12px;
+	height:39px;
+}
+.nav-item {
+	float:left;
+	display:inline;
+	zoom:0;
+}
+.nav-item a {
+	display:block;
+	padding:10px 15px;
+	background-color:#FD6440;
+	width:100%;
+	
+}
+.nav-item:first-child a {
+	border-radius:5px 0 0 5px;
+}
+.nav-item:last-child a {
+	border-radius:0 5px 5px 0;
+}
+.nav-item a:hover {
+	background:#F75733;
+}
+#demo { 
+background: #FFF; 
+overflow:hidden; 
+border: 0px dashed #CCC; 
+width: 1030px; 
+} 
+#demo img { 
+border: 3px solid #F2F2F2; 
+} 
+#indemo { 
+float: left; 
+width: 800%; 
+} 
+#demo1 { 
+float: left; 
+} 
+#demo2 { 
+float: left; 
+} 
+nav li{
+ display: inline;
+ width: 24%;
+ text-decoration: none;
+ padding: 15px;
+ }
+ li:hover{
+  background-color: lightblue;
+ }
+ section{
+  height: 300px;
+}

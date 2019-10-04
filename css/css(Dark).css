@@ -1,0 +1,122 @@
+@charset "utf-8";
+/* CSS Document */
+body
+{
+	font-family:'Bahnschrift Regular';
+	font-size:15px;
+	color:white;
+	background-color:black;
+}
+
+.Body
+{
+	border:0px solid red;
+	width:1030px;
+	height:846px;
+	margin:20px auto;
+	background-color:black;
+	background-size:cover;
+	color:white;
+	
+}
+.Body_logo
+{
+	border:0px solid red;
+	width:300px;
+	height:100px;
+	float:left;
+}
+.Body_Serach
+{
+	border:0px solid red;
+	width:500px;
+	height:100px;
+	float:left;
+	
+}
+a
+{
+	color:white;
+	text-decoration:none;
+}
+a:hover
+{
+	color:gray;
+	text-decoration:none;
+	cursor:pointer;
+}
+.nav {
+	display:block;
+	font-size:14px;
+	font-weight:400;
+	width:1040px;
+	position:relative;
+	right:10px;
+	height:39px;
+	border:0px solid red;
+}
+.nav-item {
+	position:relative;
+	bottom:15px;
+	float:left;
+	display:inline;
+	
+}
+.nav-item a {
+	display:block;
+	padding:11px 12px 11px 12px;
+	background-color:black;
+	width:78%;
+	
+}
+.nav-item:first-child a {
+	border-radius:5px 0 0 5px;
+}
+.nav-item:last-child a {
+	border-radius:0 5px 5px 0;
+}
+.nav-item a:hover {
+	background:black;
+}
+#demo { 
+background: black; 
+overflow:hidden; 
+border: 0px dashed black; 
+width: 1030px; 
+} 
+#demo img { 
+border: 3px solid black; 
+cursor: pointer;
+  transition: all 0.6s;
+} 
+#demo img:hover { 
+transform: scale(1.1);
+} 
+#indemo { 
+float: left; 
+width: 800%; 
+} 
+#demo1 { 
+float: left; 
+} 
+#demo2 { 
+float: left; 
+} 
+
+.err
+{
+		border:1px solid red;
+		color:red;
+		font-size:16px;
+		font-family:'楷体';
+		border-radius:5xp;
+}
+.right
+{
+		border:1px solid green;
+		color:green;
+		font-size:16px;
+		font-family:'隶书';
+		border-radius:5xp;
+}
+

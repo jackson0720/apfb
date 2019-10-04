@@ -1,0 +1,139 @@
+@charset "utf-8";
+/* CSS Document */
+body
+{
+	font-family:'Bahnschrift Regular';
+	font-size:15px;
+	color:black;
+	background-color:#EFEFEF;
+	
+}
+#uu
+{
+		background-color:#FF7F55;
+		color:black;
+}
+#uu:hover
+{
+	background-color:#FF7F00;
+	color:black;
+	cursor:pointer;
+}
+
+
+.Body
+{
+	border:0px solid red;
+	width:1030px;
+	height:846px;
+	margin:20px auto;
+	background-color:#EFEFEF;
+	background-size:cover;
+	
+}
+.Body_logo
+{
+	border:0px solid red;
+	width:300px;
+	height:100px;
+	float:left;
+}
+.Body_Serach
+{
+	border:0px solid red;
+	width:500px;
+	height:100px;
+	float:left;
+	
+}
+a
+{
+	color:black;
+	text-decoration:none;
+}
+ul a:hover
+{
+	color:#FFFBF0;
+	text-decoration:none;
+	cursor:pointer;
+}
+a:hover
+{
+	color:#FF7F55;
+	text-decoration:none;
+	cursor:pointer;
+}
+.nav {
+	display:block;
+	font-size:14px;
+	font-weight:400;
+	width:1040px;
+	position:relative;
+	right:10px;
+	height:39px;
+	border:0px solid red;
+}
+.nav-item {
+	position:relative;
+	bottom:15px;
+	float:left;
+	display:inline;
+	
+}
+.nav-item a {
+	display:block;
+	padding:11px 12px 11px 12px;
+	background-color:#FD6440;
+	width:78%;
+	
+}
+.nav-item:first-child a {
+	border-radius:5px 0 0 5px;
+}
+.nav-item:last-child a {
+	border-radius:0 5px 5px 0;
+}
+.nav-item a:hover {
+	background:#F75733;
+}
+#demo { 
+background: #FFF; 
+overflow:hidden; 
+border: 0px dashed #CCC; 
+width: 1030px; 
+} 
+#demo img { 
+border: 3px solid #F2F2F2; 
+cursor: pointer;
+  transition: all 0.6s;
+} 
+#demo img:hover { 
+transform: scale(1.1);
+} 
+#indemo { 
+float: left; 
+width: 800%; 
+} 
+#demo1 { 
+float: left; 
+} 
+#demo2 { 
+float: left; 
+} 
+
+.err
+{
+		border:1px solid red;
+		color:red;
+		font-size:16px;
+		font-family:'楷体';
+		border-radius:5xp;
+}
+.right
+{
+		border:1px solid green;
+		color:green;
+		font-size:16px;
+		font-family:'隶书';
+		border-radius:5xp;
+}
